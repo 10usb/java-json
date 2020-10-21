@@ -1,8 +1,10 @@
 package sunit.json;
 
-public abstract class JSON {
+import java.util.Iterator;
+
+public abstract class JSON implements Iterable<JSON> {
 	public enum Type {
-		Undefined, Null, Object, Array, String, Number, Boolean;
+		Object, Array, String, Number, Boolean;
 	}
 	
 	public static JSON parse(String text) {
@@ -12,7 +14,9 @@ public abstract class JSON {
 	
 	public static String stringify(JSON value) {
 		JsonFormatter formatter = new JsonFormatter();
-		return formatter.toJson(value);
+		StringBuilder builder = new StringBuilder();
+		formatter.toJson(builder, value);
+		return builder.toString();
 	}
 	
 	public static JSON convert(Object value) {
@@ -69,6 +73,11 @@ public abstract class JSON {
 	}
 	
 	public void insert(int index, Object value) {
+		throw new JsonException();
+	}
+	
+	@Override
+	public Iterator<JSON> iterator() {
 		throw new JsonException();
 	}
 }

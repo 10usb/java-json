@@ -39,7 +39,7 @@ public class JsonObject extends JSON {
 	public String[] keys() {
 		return entries.keySet().toArray(new String[entries.size()]);
 	}
-
+	
 	@Override
 	public String toString() {
 		return "[object]";

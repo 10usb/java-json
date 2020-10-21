@@ -1,5 +1,6 @@
 package sunit.json;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class JsonArray extends JSON {
@@ -38,6 +39,11 @@ public class JsonArray extends JSON {
 	@Override
 	public int size() {
 		return entries.size();
+	}
+	
+	@Override
+	public Iterator<JSON> iterator() {
+		return entries.iterator();
 	}
 	
 	@Override
