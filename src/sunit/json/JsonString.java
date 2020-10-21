@@ -1,7 +1,7 @@
 package sunit.json;
 
 public class JsonString extends JSON {
-	String value;
+	private String value;
 	
 	public JsonString(String value) {
 		this.value = value;
@@ -21,5 +21,4 @@ public class JsonString extends JSON {
 	public String toString() {
 		return value;
 	}
-	
 }

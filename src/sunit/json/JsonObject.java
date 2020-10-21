@@ -3,7 +3,7 @@ package sunit.json;
 import java.util.HashMap;
 
 public class JsonObject extends JSON {
-	HashMap<String, JSON> entries = new HashMap<>();
+	private HashMap<String, JSON> entries = new HashMap<>();
 	
 	@Override
 	public int getType() {
@@ -17,7 +17,7 @@ public class JsonObject extends JSON {
 	
 	@Override
 	public JSON get(int index) {
-		throw new JsonException();
+		return get(Integer.toString(index));
 	}
 	
 	@Override
@@ -44,5 +44,4 @@ public class JsonObject extends JSON {
 	public String toString() {
 		return "[object]";
 	}
-	
 }

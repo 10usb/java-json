@@ -3,7 +3,7 @@ package sunit.json;
 import java.util.LinkedList;
 
 public class JsonArray extends JSON {
-	LinkedList<JSON> entries = new LinkedList<>();
+	private LinkedList<JSON> entries = new LinkedList<>();
 	
 	@Override
 	public int getType() {

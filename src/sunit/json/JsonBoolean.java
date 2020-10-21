@@ -1,7 +1,7 @@
 package sunit.json;
 
 public class JsonBoolean extends JSON {
-	boolean value;
+	private boolean value;
 	
 	public JsonBoolean(boolean value) {
 		this.value = value;
@@ -21,5 +21,4 @@ public class JsonBoolean extends JSON {
 	public String toString() {
 		return value ? "true" : "false";
 	}
-	
 }
