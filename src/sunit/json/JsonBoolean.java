@@ -1,6 +1,6 @@
 package sunit.json;
 
-public class JsonBoolean extends JSON {
+public class JsonBoolean extends Json {
 	private boolean value;
 	
 	public JsonBoolean(boolean value) {

@@ -2,24 +2,24 @@ package sunit.json;
 
 import java.util.Iterator;
 
-public abstract class JSON implements Iterable<JSON> {
+public abstract class Json implements Iterable<Json> {
 	public enum Type {
 		Object, Array, String, Number, Boolean;
 	}
 	
-	public static JSON parse(String text) {
+	public static Json parse(String text) {
 		JsonParser parser = new JsonParser();
 		return parser.parse(text);
 	}
 	
-	public static String stringify(JSON value) {
+	public static String stringify(Json value) {
 		JsonFormatter formatter = new JsonFormatter();
 		StringBuilder builder = new StringBuilder();
 		formatter.toJson(builder, value);
 		return builder.toString();
 	}
 	
-	public static JSON convert(Object value) {
+	public static Json convert(Object value) {
 		JsonConverter converter = new JsonConverter();
 		return converter.convert(value);
 	}
@@ -36,11 +36,11 @@ public abstract class JSON implements Iterable<JSON> {
 	
 	public abstract String toString();
 	
-	public JSON get(String key) {
+	public Json get(String key) {
 		throw new JsonException();
 	}
 	
-	public JSON get(int index) {
+	public Json get(int index) {
 		throw new JsonException();
 	}
 	
@@ -68,7 +68,7 @@ public abstract class JSON implements Iterable<JSON> {
 		throw new JsonException();
 	}
 	
-	public JSON remove(int index) {
+	public Json remove(int index) {
 		throw new JsonException();
 	}
 	
@@ -77,7 +77,7 @@ public abstract class JSON implements Iterable<JSON> {
 	}
 	
 	@Override
-	public Iterator<JSON> iterator() {
+	public Iterator<Json> iterator() {
 		throw new JsonException();
 	}
 }

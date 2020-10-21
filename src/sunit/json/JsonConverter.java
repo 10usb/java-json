@@ -1,12 +1,12 @@
 package sunit.json;
 
 public class JsonConverter {
-	public JSON convert(Object value) {
+	public Json convert(Object value) {
 		if(value == null)
 			return null;
 		
-		if(value instanceof JSON)
-			return (JSON)value;		
+		if(value instanceof Json)
+			return (Json)value;		
 		
 		if(value instanceof String)
 			return new JsonString((String)value);

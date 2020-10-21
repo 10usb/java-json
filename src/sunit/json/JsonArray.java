@@ -3,8 +3,8 @@ package sunit.json;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class JsonArray extends JSON {
-	private LinkedList<JSON> entries = new LinkedList<>();
+public class JsonArray extends Json {
+	private LinkedList<Json> entries = new LinkedList<>();
 	
 	@Override
 	public Type getType() {
@@ -12,27 +12,27 @@ public class JsonArray extends JSON {
 	}
 	
 	@Override
-	public JSON get(int index) {
+	public Json get(int index) {
 		return entries.get(index);
 	}
 	
 	@Override
 	public void set(int index, Object value) {
-		entries.set(index, JSON.convert(value));
+		entries.set(index, Json.convert(value));
 	}
 	
 	@Override
 	public void append(Object value) {
-		entries.add(JSON.convert(value));
+		entries.add(Json.convert(value));
 	}
 	
 	@Override
 	public void insert(int index, Object value) {
-		entries.add(index, JSON.convert(value));
+		entries.add(index, Json.convert(value));
 	}
 
 	@Override
-	public JSON remove(int index) {
+	public Json remove(int index) {
 		return entries.remove(index);
 	}
 	
@@ -42,7 +42,7 @@ public class JsonArray extends JSON {
 	}
 	
 	@Override
-	public Iterator<JSON> iterator() {
+	public Iterator<Json> iterator() {
 		return entries.iterator();
 	}
 	

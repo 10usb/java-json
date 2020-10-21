@@ -1,7 +1,7 @@
 package sunit.json;
 
 public class JsonFormatter {
-	public void toJson(StringBuilder builder, JSON value) {
+	public void toJson(StringBuilder builder, Json value) {
 		if (value == null) {
 			builder.append("null");
 			return;

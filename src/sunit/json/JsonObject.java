@@ -2,8 +2,8 @@ package sunit.json;
 
 import java.util.HashMap;
 
-public class JsonObject extends JSON {
-	private HashMap<String, JSON> entries = new HashMap<>();
+public class JsonObject extends Json {
+	private HashMap<String, Json> entries = new HashMap<>();
 	
 	@Override
 	public Type getType() {
@@ -11,18 +11,18 @@ public class JsonObject extends JSON {
 	}
 	
 	@Override
-	public JSON get(String key) {
+	public Json get(String key) {
 		return entries.get(key);
 	}
 	
 	@Override
-	public JSON get(int index) {
+	public Json get(int index) {
 		return get(Integer.toString(index));
 	}
 	
 	@Override
 	public void set(String key, Object value) {
-		entries.put(key, JSON.convert(value));
+		entries.put(key, Json.convert(value));
 	}
 	
 	@Override

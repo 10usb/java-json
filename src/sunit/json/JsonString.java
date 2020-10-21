@@ -1,6 +1,6 @@
 package sunit.json;
 
-public class JsonString extends JSON {
+public class JsonString extends Json {
 	private String value;
 	
 	public JsonString(String value) {
