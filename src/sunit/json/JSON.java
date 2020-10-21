@@ -1,11 +1,9 @@
 package sunit.json;
 
 public abstract class JSON {
-	public static final int OBJECT = 0;
-	public static final int ARRAY = 1;
-	public static final int STRING = 2;
-	public static final int NUMBER = 3;
-	public static final int BOOLEAN = 4;
+	public enum Type {
+		Undefined, Null, Object, Array, String, Number, Boolean;
+	}
 	
 	public static JSON parse(String text) {
 		JsonParser parser = new JsonParser();
@@ -22,7 +20,7 @@ public abstract class JSON {
 		return converter.convert(value);
 	}
 	
-	public abstract int getType();
+	public abstract Type getType();
 	
 	public boolean toBoolean() {
 		throw new JsonException();

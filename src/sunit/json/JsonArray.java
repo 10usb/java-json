@@ -6,8 +6,8 @@ public class JsonArray extends JSON {
 	private LinkedList<JSON> entries = new LinkedList<>();
 	
 	@Override
-	public int getType() {
-		return ARRAY;
+	public Type getType() {
+		return Type.Array;
 	}
 	
 	@Override

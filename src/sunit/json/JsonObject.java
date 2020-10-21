@@ -6,8 +6,8 @@ public class JsonObject extends JSON {
 	private HashMap<String, JSON> entries = new HashMap<>();
 	
 	@Override
-	public int getType() {
-		return OBJECT;
+	public Type getType() {
+		return Type.Object;
 	}
 	
 	@Override

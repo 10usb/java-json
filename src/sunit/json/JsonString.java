@@ -8,8 +8,8 @@ public class JsonString extends JSON {
 	}
 	
 	@Override
-	public int getType() {
-		return STRING;
+	public Type getType() {
+		return Type.String;
 	}
 
 	@Override

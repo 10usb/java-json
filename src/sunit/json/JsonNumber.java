@@ -8,8 +8,8 @@ public class JsonNumber extends JSON {
 	}
 	
 	@Override
-	public int getType() {
-		return NUMBER;
+	public Type getType() {
+		return Type.Number;
 	}
 
 	@Override

@@ -8,8 +8,8 @@ public class JsonBoolean extends JSON {
 	}
 	
 	@Override
-	public int getType() {
-		return BOOLEAN;
+	public Type getType() {
+		return Type.Boolean;
 	}
 	
 	@Override
