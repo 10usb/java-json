@@ -5,6 +5,9 @@ public class JsonConverter {
 		if(value == null)
 			return null;
 		
+		if(value instanceof JSON)
+			return (JSON)value;		
+		
 		if(value instanceof String)
 			return new JsonString((String)value);
 		
