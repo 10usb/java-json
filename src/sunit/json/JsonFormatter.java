@@ -2,6 +2,11 @@ package sunit.json;
 
 public class JsonFormatter {
 	public void toJson(StringBuilder builder, JSON value) {
+		if (value == null) {
+			builder.append("null");
+			return;
+		}
+		
 		switch (value.getType()) {
 			case Boolean:
 				builder.append(value.toString());
@@ -19,6 +24,7 @@ public class JsonFormatter {
 					toJson(builder, value.get(0));
 					
 					for (int index = 1; index < value.size(); index++) {
+						builder.append(", ");
 						toJson(builder, value.get(index));
 					}
 				}
@@ -40,8 +46,6 @@ public class JsonFormatter {
 					}
 				}
 				builder.append('}');
-			break;
-			default:
 			break;
 		}
 	}
