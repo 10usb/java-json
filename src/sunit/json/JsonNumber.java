@@ -1,5 +1,10 @@
 package sunit.json;
 
+/**
+ * A numeric Json value
+ * 
+ * @author 10usb
+ */
 public class JsonNumber extends Json {
 	private Number value;
 	

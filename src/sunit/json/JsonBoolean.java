@@ -1,5 +1,10 @@
 package sunit.json;
 
+/**
+ * A boolean Json value
+ * 
+ * @author 10usb
+ */
 public class JsonBoolean extends Json {
 	private boolean value;
 	

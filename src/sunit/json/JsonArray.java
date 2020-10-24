@@ -3,6 +3,11 @@ package sunit.json;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * An array Json value
+ * 
+ * @author 10usb
+ */
 public class JsonArray extends Json {
 	private LinkedList<Json> entries = new LinkedList<>();
 	

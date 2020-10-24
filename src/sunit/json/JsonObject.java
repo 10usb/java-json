@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * A hash table Json value
+ * 
+ * @author 10usb
+ */
 public class JsonObject extends Json {
 	private List<Entry> entries = new LinkedList<>();
 	private HashMap<String, Entry> index = new HashMap<>();
@@ -63,6 +68,11 @@ public class JsonObject extends Json {
 		return "[object]";
 	}
 	
+	/**
+	 * An hash table entry
+	 * 
+	 * @author 10usb
+	 */
 	public class Entry {
 		private String key;
 		private Json value;

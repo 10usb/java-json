@@ -1,6 +1,16 @@
 package sunit.json;
 
+/**
+ * 
+ * @author 10usb
+ */
 public class JsonFormatter {
+	/**
+	 * Appends the string representation of a Json value to the StringBuilder
+	 * 
+	 * @param builder
+	 * @param value
+	 */
 	public void toJson(StringBuilder builder, Json value) {
 		if (value == null) {
 			builder.append("null");

@@ -1,5 +1,9 @@
 package sunit.json;
 
+/**
+ * A string Json value
+ * @author 10usb
+ */
 public class JsonString extends Json {
 	private String value;
 	
