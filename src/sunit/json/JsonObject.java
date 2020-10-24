@@ -15,8 +15,7 @@ public class JsonObject extends Json {
 	
 	@Override
 	public Json get(String key) {
-		if(!index.containsKey(key))
-			return null;
+		if (!index.containsKey(key)) throw new JsonException("Undefined index");
 		
 		return index.get(key).getValue();
 	}
