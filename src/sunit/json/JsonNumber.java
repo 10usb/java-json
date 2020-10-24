@@ -11,7 +11,7 @@ public class JsonNumber extends Json {
 	public Type getType() {
 		return Type.Number;
 	}
-
+	
 	@Override
 	public Number toNumber() {
 		return value;

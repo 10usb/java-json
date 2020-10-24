@@ -11,12 +11,12 @@ public class JsonString extends Json {
 	public Type getType() {
 		return Type.String;
 	}
-
+	
 	@Override
 	public int size() {
 		return value.length();
 	}
-
+	
 	@Override
 	public String toString() {
 		return value;

@@ -27,11 +27,11 @@ public class JsonObject extends Json {
 	
 	@Override
 	public void set(String key, Object value) {
-		if(!index.containsKey(key)) {
+		if (!index.containsKey(key)) {
 			Entry entry = new Entry(key, Json.convert(value));
 			entries.add(entry);
 			index.put(key, entry);
-		}else {
+		} else {
 			index.get(key).value = Json.convert(value);
 		}
 	}
@@ -51,7 +51,7 @@ public class JsonObject extends Json {
 		String[] keys = new String[entries.size()];
 		int offset = 0;
 		
-		for(Entry entry : entries) {
+		for (Entry entry : entries) {
 			keys[offset++] = entry.getKey();
 		}
 		
@@ -63,7 +63,6 @@ public class JsonObject extends Json {
 		return "[object]";
 	}
 	
-	
 	public class Entry {
 		private String key;
 		private Json value;
@@ -72,7 +71,7 @@ public class JsonObject extends Json {
 			this.key = key;
 			this.value = value;
 		}
-
+		
 		public String getKey() {
 			return key;
 		}

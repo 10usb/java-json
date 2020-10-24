@@ -30,7 +30,7 @@ public class JsonArray extends Json {
 	public void insert(int index, Object value) {
 		entries.add(index, Json.convert(value));
 	}
-
+	
 	@Override
 	public Json remove(int index) {
 		return entries.remove(index);
