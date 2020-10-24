@@ -20,13 +20,13 @@ object.set("success", true);
 object.set("count", 1234);
 object.set("values", values);
 
-String json = JSON.stringify(object);
+String json = Json.stringify(object);
 System.out.println(json);
 ``` 
 Or reading from it
 ```java
 String jsonString = "{\"hallo\": \"Test\", \"success\": true, \"values\": [12.34, null, \"asdsa\"], \"count\": 1234}";
-JSON json = JSON.parse(jsonString);
+JSON json = Json.parse(jsonString);
 
 String value1 = json.get("hallo").toString();
 System.out.println("value of hallo: " + value1);
